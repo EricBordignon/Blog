@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+ <div id="main-wrapper">
+  <h1 id="blog-title">Blog</h1>
+  <button id="new-post-btn"><a href="/post">New Post</a></button>
+  <div id="posts-container">
+    <% posts.forEach(post => { %>
+      <div class="post">
+        <h2><%= post.title %></h2>
+        <p><strong><%= post.author %></strong> — <em><%= new Date(post.time).toLocaleString() %></em></p>
+        <p><%= post.text %></p>
+        
+
+        <form action="/edit/<%= post.id %>" method="GET" style="display: inline;">
+          <button class="modify-btn" id="edit" type="submit">✏️</button>
+        </form>
+
+        <form action="/delete/<%= post.id %>" method="POST" style="display: inline;">
+          <button class="modify-btn" id="delete" type="submit">🗑️</button>
+        </form>
+        
+        
+      </div>
+    <% }) %>
+  </div>
+ </div>
+</main>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,17 @@
+
+<%- include("partials/header.ejs") %>
+
+<main>
+  
+
+  <form action="<%= post ? `/edit/${post.id}` : '/submit' %>" method="POST" id="post">
+    <h1><%= post ? "Edit Post" : "New Post" %></h1>
+    <input class="field" type="text" name="author" placeholder="Author" value="<%= post?.author || '' %>" required>
+    <input class="field" type="text" name="title" placeholder="Title" value="<%= post?.title || '' %>" required>
+    <textarea id="text" name="text" placeholder="Text" rows="10" required><%= post?.text || '' %></textarea>
+    <br>
+    <input id="post-btn" type="submit" value="<%= post ? 'Save Changes' : 'Post' %>">
+  </form>
+</main>
+
+<%- include("partials/footer.ejs") %>
