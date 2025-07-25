@@ -34,19 +34,25 @@ This project was built as part of my learning journey through Angela Yu's Full S
 
 2. **Navigate into the project folder:**
 
-  cd blog
+   cd blog
   
 3. **Install dependencies**
 
-  npm install
+   npm install
 
-### ▶️ Running the app
+---
 
-  node server.js
+## ▶️ Running the app
 
-### 📌 Notes
+   node server.js
+
+---
+
+## 📌 Notes
 
 - This project is still evolving. Future improvements may include persistent database integration, authentication, and a richer UI.
 - The purpose of this project is primarily educational.
+
+---
 
    
